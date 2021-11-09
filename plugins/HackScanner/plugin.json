@@ -1,0 +1,10 @@
+{
+  "id": "webimage/wp-cli-hack-scanner",
+  "name": "Hack Scanner",
+  "version": "1.0.0",
+  "author": {
+    "name": "Robert Jones",
+    "email": "rjones@corporatewebimage.com",
+    "website": "https://www.corporatewebimage.com"
+  }
+}

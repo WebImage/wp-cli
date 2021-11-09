@@ -1,0 +1,23 @@
+{
+    "name": "webimage/wp-cli",
+    "description": "WordPress CLI Tools",
+    "type": "project",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Robert Jones II",
+            "email": "rjones@corporatewebimage.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "webimage/application": "dev-master",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/src",
+            "WebImage\\WpCli\\HackScanner\\": "plugins/HackScanner/src"
+        }
+    }
+}
