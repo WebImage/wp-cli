@@ -4,7 +4,6 @@ namespace App\WpCli\Commands;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use WebImage\Application\AbstractCommand;
 
 class CoreCommand extends AbstractCommand
 {
