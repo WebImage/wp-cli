@@ -18,7 +18,7 @@ class PluginRepoAddCommand extends AbstractCommand
 {
 	protected function execute(InputInterface $input, OutputInterface $output)
 	{
-		$repo = new Repository($this->getRootApplication()->getProjectPath() . '/repos/plugins');
+		$repo = $this->getRootApplication()->getServiceManager()->get(Repository::class);
 		$this->addPlugin($input, $output, $repo);
 	}
 
