@@ -9,7 +9,7 @@ class RepositoryServiceProvider extends AbstractServiceProvider
 {
 	protected $provides = [Repository::class];
 
-	public function register()
+	public function register(): void
 	{
 		$this->getContainer()->add(Repository::class, function() {
 			$config = $this->getApplication()->getConfig()->get('wp-cli', new Config());
