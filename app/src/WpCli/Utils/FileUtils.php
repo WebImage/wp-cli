@@ -1,6 +1,6 @@
 <?php
 
-namespace App\WpCli;
+namespace App\WpCli\Utils;
 
 class FileUtils
 {
