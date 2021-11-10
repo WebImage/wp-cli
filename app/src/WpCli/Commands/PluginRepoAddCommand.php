@@ -2,9 +2,9 @@
 
 namespace App\WpCli\Commands;
 
-use App\WpCli\FileUtils;
 use App\WpCli\PluginManagement\Plugin;
 use App\WpCli\PluginManagement\Repository;
+use App\WpCli\Utils\FileUtils;
 use App\WpCli\Utils\LocalInstallUtils;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Helper\Table;
@@ -40,9 +40,9 @@ class PluginRepoAddCommand extends AbstractCommand
 			$pluginQuestion = new Question('Plugin (key): ');
 			$plugin = $this->getQuestionHelper()->ask($input, $output, $pluginQuestion);
 
-			if (empty($plugin)) die(__FILE__ . ':' . __LINE__ . PHP_EOL);
+			if (empty($plugin)) throw new \Exception('Invalid plugin');
 
-			$output->writeln('Will install plugin: ' . $plugin);
+			$this->addPluginVersion($input, $output, $repo, $plugin);
 		}
 	}
 
